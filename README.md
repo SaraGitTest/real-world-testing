@@ -33,6 +33,7 @@ Testing is done using Playwright for the Frontend und currently only the officia
 Install all the dependencies, this will also set up the prisma sqlite database.
 
 ```bash
+cd realworld-testing
 npm install
 ```
 
