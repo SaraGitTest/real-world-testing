@@ -1,0 +1,26 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "ConduitAPI",
+    "dateExported": "2024-02-01T15:15:44.821Z",
+    "version": "1.0",
+    "global": true,
+    "local": true,
+    "variables": [
+        {
+            "name": "APIURL",
+            "value": "localhost:3000/api"
+        },
+        {
+            "name": "USERNAME",
+            "value": ""
+        },
+        {
+            "name": "EMAIL",
+            "value": ""
+        },
+        {
+            "name": "PASSWORD",
+            "value": ""
+        }
+    ]
+}
