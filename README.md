@@ -39,7 +39,7 @@ npm install
 To run the application in development mode:
 
 ```bash
-npm dev
+npm run dev
 ```
 
 # API
