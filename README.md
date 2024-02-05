@@ -43,7 +43,7 @@ To run the application in development mode:
 npm run dev
 ```
 
-# API
+# API Testing
 
 1. Install [ThunderClient](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) for VSCode.
 

@@ -5,9 +5,9 @@ const bcrypt = require('bcrypt')
 
 const prisma = new Prisma.PrismaClient()
 async function main() {
-  const data = await fetch('https://api.realworld.io/api/articles?limit=200').then(res =>
-    res.json(),
-  )
+  // const data = await fetch('https://api.realworld.io/api/articles?limit=200').then(res =>
+  //   res.json(),
+  // )
 
   const password = 'Test1234'
   const passwordHash = await bcrypt.hash(password, 10)
