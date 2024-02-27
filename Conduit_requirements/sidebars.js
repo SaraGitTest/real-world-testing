@@ -28,6 +28,18 @@ const sidebars = {
     },
   ],
    */
+
+  // apiSidebar: [
+  //   {
+  //     type: 'category',
+  //     label: 'API',
+  //     items: [
+  //       'API/api_swagger_articles', 
+  //       'API/api_swagger_user_and_authentication', 
+  //       'hello'
+  //     ],
+  //   },
+  // ],
 };
 
 export default sidebars;
