@@ -1,6 +1,9 @@
 ---
 sidebar_position: 1
 ---
+# Swagger User Authentication
+
+## User and Authentication
 <!-- # Swagger User Authentication
 
 ## User and Authentication

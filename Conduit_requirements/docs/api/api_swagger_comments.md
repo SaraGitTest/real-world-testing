@@ -159,7 +159,7 @@ sidebar_position: 3
 <details>
   <summary>
     <div>
-      <span style={{ fontWeight: 'bold', color: '#EE4B2B' }}>Delete a comment</span>&nbsp; &nbsp; /articles/`slug`/comments/`commentId`&nbsp; &nbsp; &nbsp; Delete a comment for an article
+      <span style={{ fontWeight: 'bold', color: '#EE4B2B' }}>DELETE</span>&nbsp; &nbsp; /articles/`slug`/comments/`commentId`&nbsp; &nbsp; &nbsp; Delete a comment for an article
     </div>
   </summary>
   
