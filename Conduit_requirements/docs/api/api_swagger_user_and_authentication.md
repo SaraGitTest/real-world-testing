@@ -60,7 +60,7 @@ sidebar_position: 6
         "bio": null,
         "image": "https://api.realworld.io/images/smiley-cyrus.jpeg"
     }
-   }
+  }
   ```
 
   | Response headers               |
@@ -130,7 +130,7 @@ sidebar_position: 6
         "bio": null,
         "image": "https://api.realworld.io/images/smiley-cyrus.jpeg"
     }
-   }
+  }
   ```
 
   | Response headers               |

@@ -1,304 +1,173 @@
 ---
 sidebar_position: 4
 ---
-<!-- ## Profile
+# Swagger Profile
 
 <details>
+  <summary>
+    <div>
+      <span style={{ fontWeight: 'bold', color: '#0096FF' }}>GET</span>&nbsp; &nbsp; /profiles/`USERNAME` &nbsp; &nbsp; &nbsp; Get a profile
+    </div>
+  </summary>
 
-<summary><b><span style="color:#0096FF">GET</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /profiles/{USERNAME}</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Get a profile</summary>
-&nbsp;
+  **Parameters:**
+  
+  | Name                                                                                | Description |
+  | ----------------------------------------------------------------------------------- | ----------- |
+  | `USERNAME`<sup style={{ color: '#EE4B2B' }}>*</sup> <h6>string</h6> <h6>(path)</h6> | Gerome      |
 
-**Parameters:**
-<table>
-    <thead>
-        <tr>
-            <th><h5>Name</h5></th>
-            <th><h5>Description</h5></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-            <p>
-                <h6>USERNAME<sup><span style="color:#EE4B2B"> * required</span></sup>
-                <br>
-                <br>
-                string
-                <br>
-                (path)
-                </h6>
-            </p>
-            </td>
-            <td><h5>Gerome</h5></td>
-        </tr>
-</table>
+  **Responses:**
 
-**Responses:**
-**<h5>Curl</h5>**
-```
-curl -X 'GET' \
-  'http://localhost:3000/api/profiles/Gerome' \
-  -H 'accept: */*'
-```
-**<h5>Request URL</h5>**
-http://localhost:3000/api/profiles/Gerome
+  **Curl:**
+  ```bash
+  curl -X 'GET' \
+    'http://localhost:3000/api/profiles/Gerome' \
+    -H 'accept: */*'
+  ```
 
-**<h5>Server response</h5>**
+  **Request URL:**
+  
+  http://localhost:3000/api/profiles/Gerome
 
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan=4>200</th>
-      <th>Response body</th>
-    </tr>
-    <tr>
-      <td> {
-            <br>
-            &nbsp; &nbsp;
-            "profile": {
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "username": "Gerome",
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "bio": "Hello followers",
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "image": "https://api.realworld.io/images/demo-avatar.png",
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "following": true
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                <br>
-                &nbsp; &nbsp;
-                }
-        <br>
-        }
-      </td>
-    </tr>
-    <tr>
-      <th>Response headers</th>
-    </tr>
-    <tr>
-      <td>content-type: application/json </td>
-    </tr>
-  </tbody>
-</table>
+  **Server response:**
+  | Code | Details        |
+  | ---- | -------------- |
+  | 200  | See JSON below |
 
-**<h5>Responses</h5>**
+  ```json
+  {
+    "profile": {
+      "username": "Gerome",
+      "bio": "Hello followers",
+      "image": "https://api.realworld.io/images/demo-avatar.png",
+      "following": true
+    }
+  }
+  ```
 
-| <h5> Code </h5> | <h5> Description </h5>         | <h5> Links </h5>    |
-| :-------------- | :----------------------------- | :------------------ |
-| 200             | Profile retrieved successfully | <em> No links </em> |
-| 401             | Unauthorized                   | <em> No links </em> |
-| 422             | Unexpected error               | <em> No links </em> |
+  | Response headers               |
+  | ------------------------------ |
+  | content-type: application/json |
+
+  **Responses:**
+  | Code | Description                    | Links    |
+  | ---- | ------------------------------ | -------- |
+  | 200  | Profile retrieved successfully | No links |
+  | 401  | Unauthorized                   | No links |
+  | 422  | Unexpected error               | No links |
 
 </details>
 
 <details>
 
-<summary><b><span style="color:#008000">POST</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /profiles/{USERNAME}/follow</b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Follow a user</summary>
-&nbsp;
+  <summary>
+    <div>
+      <span style={{ fontWeight: 'bold', color: '#008000' }}>POST</span>&nbsp; &nbsp; /profiles/`USERNAME`/follow &nbsp; &nbsp; &nbsp; Follow a user
+    </div>
+  </summary>
 
-**Parameters:**
-<table>
-    <thead>
-        <tr>
-            <th><h5>Name</h5></th>
-            <th><h5>Description</h5></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-            <p>
-                <h6>USERNAME<sup><span style="color:#EE4B2B"> * required</span></sup>
-                <br>
-                <br>
-                string
-                <br>
-                (path)
-                </h6>
-            </p>
-            </td>
-            <td><h5>username_1</h5></td>
-        </tr>
-</table>
+  **Parameters:**
+  
+  | Name                                                                                | Description |
+  | ----------------------------------------------------------------------------------- | ----------- |
+  | `USERNAME`<sup style={{ color: '#EE4B2B' }}>*</sup> <h6>string</h6> <h6>(path)</h6> | username_1  |
 
-**Responses:**
-**<h5>Curl</h5>**
-```
-curl -X 'POST' \
-  'http://localhost:3000/api/profiles/username_1/follow' \
-  -H 'accept: */*' \
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4' \
-  -d ''
-```
-**<h5>Request URL</h5>**
-http://localhost:3000/api/profiles/username_1/follow
+  **Responses:**
 
-**<h5>Server response</h5>**
+  **Curl:**
+  ```bash
+  curl -X 'POST' \
+    'http://localhost:3000/api/profiles/username_1/follow' \
+    -H 'accept: */*' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4' \
+    -d ''
+  ```
 
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan=4>200</th>
-      <th>Response body</th>
-    </tr>
-    <tr>
-      <td> {
-            <br>
-            &nbsp; &nbsp;
-            "profile": {
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "username": "username_1",
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "bio": null,
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "image": "https://api.realworld.io/images/smiley-cyrus.jpeg",
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "following": true
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                <br>
-                &nbsp; &nbsp;
-                }
-        <br>
-        }
-      </td>
-    </tr>
-    <tr>
-      <th>Response headers</th>
-    </tr>
-    <tr>
-      <td>content-type: application/json </td>
-    </tr>
-  </tbody>
-</table>
+  **Request URL:**
+  
+  http://localhost:3000/api/profiles/username_1/follow
 
-**<h5>Responses</h5>**
+  **Server response:**
+  | Code | Details        |
+  | ---- | -------------- |
+  | 200  | See JSON below |
 
-| <h5> Code </h5> | <h5> Description </h5>     | <h5> Links </h5>    |
-| :-------------- | :------------------------- | :------------------ |
-| 200             | User followed successfully | <em> No links </em> |
-| 401             | Unauthorized               | <em> No links </em> |
-| 422             | Unexpected error           | <em> No links </em> |
+  ```json
+  {
+    "profile": {
+      "username": "username_1",
+      "bio": null,
+      "image": "https://api.realworld.io/images/smiley-cyrus.jpeg",
+      "following": true
+    }
+  }
+  ```
+
+  | Response headers               |
+  | ------------------------------ |
+  | content-type: application/json |
+
+  **Responses:**
+  | Code | Description                | Links    |
+  | ---- | -------------------------- | -------- |
+  | 200  | User followed successfully | No links |
+  | 401  | Unauthorized               | No links |
+  | 422  | Unexpected error           | No links |
 
 </details>
 
 <details>
 
-<summary><b><span style="color:#EE4B2B">DELETE</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /profiles/{USERNAME}/follow</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Unfollow a user</summary>
-&nbsp;
+  <summary>
+    <div>
+      <span style={{ fontWeight: 'bold', color: '#EE4B2B' }}>DELETE</span>&nbsp; &nbsp; /profiles/`USERNAME`/follow &nbsp; &nbsp; &nbsp; Unfollow a user
+    </div>
+  </summary>
 
-**Parameters:**
-<table>
-    <thead>
-        <tr>
-            <th><h5>Name</h5></th>
-            <th><h5>Description</h5></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-            <p>
-                <h6>USERNAME<sup><span style="color:#EE4B2B"> * required</span></sup>
-                <br>
-                <br>
-                string
-                <br>
-                (path)
-                </h6>
-            </p>
-            </td>
-            <td><h5>username_1</h5></td>
-        </tr>
-</table>
+  **Parameters:**
+  
+  | Name                                                                                | Description |
+  | ----------------------------------------------------------------------------------- | ----------- |
+  | `USERNAME`<sup style={{ color: '#EE4B2B' }}>*</sup> <h6>string</h6> <h6>(path)</h6> | username_1  |
 
-**Responses:**
-**<h5>Curl</h5>**
-```
-curl -X 'DELETE' \
-  'http://localhost:3000/api/profiles/username_1/follow' \
-  -H 'accept: */*' \
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4'
-```
-**<h5>Request URL</h5>**
-http://localhost:3000/api/profiles/username_1/follow
+  **Responses:**
 
-**<h5>Server response</h5>**
+  **Curl:**
+  ```bash
+  curl -X 'DELETE' \
+    'http://localhost:3000/api/profiles/username_1/follow' \
+    -H 'accept: */*' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNsc3QxZDJ3czAwMDA2M3hiZTVsZHFsOHoiLCJpYXQiOjE3MDg1MTIxMDV9.9Ar6eoPvWM1ydXFwhsrUy2lHIhoLG5AnskFzAvd9sm4'
+  ```
 
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan=4>200</th>
-      <th>Response body</th>
-    </tr>
-    <tr>
-      <td> {
-            <br>
-            &nbsp; &nbsp;
-            "profile": {
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "username": "username_1",
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "bio": null,
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "image": "https://api.realworld.io/images/smiley-cyrus.jpeg",
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    "following": false
-                    <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                <br>
-                &nbsp; &nbsp;
-                }
-        <br>
-        }
-      </td>
-    </tr>
-    <tr>
-      <th>Response headers</th>
-    </tr>
-    <tr>
-      <td>content-type: application/json </td>
-    </tr>
-  </tbody>
-</table>
+  **Request URL:**
+  
+  http://localhost:3000/api/profiles/username_1/follow
 
-**<h5>Responses</h5>**
+  | Code | Details        |
+  | ---- | -------------- |
+  | 200  | See JSON below |
 
-| <h5> Code </h5> | <h5> Description </h5>       | <h5> Links </h5>    |
-| :-------------- | :--------------------------- | :------------------ |
-| 200             | User unfollowed successfully | <em> No links </em> |
-| 401             | Unauthorized                 | <em> No links </em> |
-| 422             | Unexpected error             | <em> No links </em> |
+  ```json
+  {
+    "profile": {
+      "username": "username_1",
+      "bio": null,
+      "image": "https://api.realworld.io/images/smiley-cyrus.jpeg",
+      "following": false
+    }
+  }
+  ```
 
-</details> -->
+  | Response headers               |
+  | ------------------------------ |
+  | content-type: application/json |
+
+  **Responses:**
+  | Code | Description                  | Links    |
+  | ---- | ---------------------------- | -------- |
+  | 200  | User unfollowed successfully | No links |
+  | 401  | Unauthorized                 | No links |
+  | 422  | Unexpected error             | No links |
+
+</details>
