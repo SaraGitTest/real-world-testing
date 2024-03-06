@@ -59,10 +59,12 @@ const sidebars = {
   ],
 
   api: [
-    'api/api_swagger_user_and_authentication',
     'api/api_swagger_articles',
     'api/api_swagger_comments',
-    'api/test',
+    'api/api_swagger_favorites',
+    'api/api_swagger_profile',
+    'api/api_swagger_tags',
+    'api/api_swagger_user_and_authentication',
     // {
     //   type: 'category',
     //   label: 'API',

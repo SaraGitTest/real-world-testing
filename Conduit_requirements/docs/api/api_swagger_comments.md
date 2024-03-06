@@ -1,9 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 # Swagger Comments
 
-## Comments
 <details>
   <summary>
     <div>
