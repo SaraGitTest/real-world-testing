@@ -1,7 +1,7 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
-# Swagger Tags
+#  Tags
 
 <details>
   <summary>

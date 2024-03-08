@@ -1,12 +1,14 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
-# Swagger Articles
+
+
+#  Articles
 
 <details>
   <summary>
     <div>
-      <span style={{ fontWeight: 'bold', color: '#0096FF' }}>GET</span>&nbsp; &nbsp; /articles/feed &nbsp; &nbsp; &nbsp; Get most recent articles from users you follow
+       <span style={{ fontWeight: 'bold', color: '#0096FF' }}>GET</span>&nbsp; &nbsp; /articles/feed &nbsp; &nbsp; &nbsp; Get most recent articles from users you follow
     </div>
   </summary>
   
